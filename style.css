@@ -185,7 +185,7 @@ input {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: url('./imgs/texture.png') no-repeat;
+  background: url('imgs/texture.png') no-repeat;
   opacity: 0.023;
 }
 
@@ -214,7 +214,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('/imgs/thunder.png');
+  background-image: url('imgs/thunder.png');
   background-repeat: no-repeat;
   background-size: 49px 49px;
   background-position: center;
@@ -223,7 +223,7 @@ input {
 .login-page .login-motivator .login-motivator-inner::after {
   content: '';
   position: absolute;
-  background-image: url('/imgs/woman.png');
+  background-image: url('imgs/woman.png');
   background-repeat: no-repeat;
   background-position: 82% 0;
   background-size: cover;
@@ -250,11 +250,7 @@ input {
 
 /* ===[Start RTL]=== */
 /* ===[Start Global Style]=== */
-.input-holder {
-  position: relative;
-}
-
-.input-holder .input-icon {
+html[dir=rtl] .input-holder .input-icon {
   left: unset;
   right: 1rem;
 }
