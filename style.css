@@ -1,0 +1,284 @@
+/* ===[Start Variables]=== */
+:root {
+  /* Mono Colors */
+  --light-color: #fff;
+  --dark-color: #000;
+
+  /* Gradients */
+  --primary-gradient-color: linear-gradient(45deg, rgba(80,56,237,1) 0%, rgba(145,129,244,1) 100%);
+  --reversed-primary-gradient-color: linear-gradient(45deg, rgba(145,129,244,1) 0%, rgba(80,56,237,1) 100%);
+}
+/* ===[End Variables]=== */
+
+/* ===[Start Reset default CSS]=== */
+* {
+  box-sizing: border-box;
+  font-family: Poppins, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+/* ===[End Reset default CSS]=== */
+
+/* ===[Start Global Style]=== */
+.input-holder {
+  position: relative;
+}
+
+.input-holder .input-icon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+}
+
+.input-holder .input-icon svg,
+.input-holder .input-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.input-holder input {
+  width: 100%;
+  background: #F0EDFFCC;
+  border-radius: 16px;
+  height: 52px;
+  font-size: 12px;
+  padding-inline-start: 3rem;
+  padding-inline-end: 1.5rem;
+  border: none;
+}
+/* ===[End Global Style]=== */
+
+/* ===[Start Login Form]=== */
+.login-page {
+  min-height: 100svh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.login-page .login-page-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.login-page .login-page-box .inner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 364px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.login-page .login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.login-page .login-form .login-title {
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.login-page .login-form .login-sub-title  {
+  color: #525252;
+}
+
+.login-page .login-form .submit-form-btn  {
+  text-transform: capitalize;
+  align-self: center;
+  background: var(--reversed-primary-gradient-color);
+  color: var(--light-color);
+  border: none;
+  padding: 1rem;
+  border-radius: 16px;
+  font-weight: 700;
+  margin-top: 6px;
+  box-shadow: 0 8px 21px 0 #00000029;
+}
+
+.login-page .social-login .social-login-title {
+  position: relative;
+  display: block;
+  margin-top: 24px;
+}
+
+.login-page .social-login .social-login-title span {
+  background: var(--light-color);
+  position: relative;
+  z-index: 1;
+}
+
+.login-page .social-login .social-login-title::after {
+  content: '';
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #F0EDFF;
+  position: absolute;
+}
+
+.login-page .social-login .social-login-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 24px;
+}
+
+.login-page .social-login .social-login-btns .social-login-btn {
+  background: transparent;
+  padding: 1rem;
+  border: 1px solid #F0EDFF;
+  border-radius: 16px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.login-page .social-login .social-login-btns .social-login-btn .btn-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.login-page .social-login .social-login-btns .social-login-btn .btn-icon img {
+  width: 100%;
+  height: 100%;
+}
+/* ===[End Login Form]=== */
+
+/* ===[Start Login Motivator]=== */
+.login-page .login-motivator {
+  position: relative;
+  background: linear-gradient(45deg, rgba(80,56,237,1) 0%, rgba(145,129,244,1) 100%);
+}
+
+.login-page .login-motivator::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url('./imgs/texture.png') no-repeat;
+  opacity: 0.023;
+}
+
+.login-page .login-motivator .login-motivator-inner {
+  height: 524px;
+  width: 100%;
+  max-width: 412px;
+  border: 1px solid rgba(255,255,255, 0.52);
+  border-radius: 46px;
+  background: rgba(255,255,255, 0.21);
+  position: relative;
+  backdrop-filter: blur(5px);
+  padding-top: 26px;
+  padding-inline-start: 31px;
+}
+
+.login-page .login-motivator .login-motivator-inner::before {
+  content: '';
+  position: absolute;
+  bottom: 98px;
+  left: -2rem;
+  width: 79px;
+  height: 79px;
+  background: var(--light-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/imgs/thunder.png');
+  background-repeat: no-repeat;
+  background-size: 49px 49px;
+  background-position: center;
+}
+
+.login-page .login-motivator .login-motivator-inner::after {
+  content: '';
+  position: absolute;
+  background-image: url('/imgs/woman.png');
+  background-repeat: no-repeat;
+  background-position: 82% 0;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  left: 35px;
+  top: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.login-page .login-motivator .login-motivator-inner span {
+  display: block;
+  width: 50%;
+  max-width: 184px;
+  text-align: left;
+  font-size: 32px;
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+  color: var(--light-color);
+}
+/* ===[End Login Motivator]=== */
+
+/* ===[Start RTL]=== */
+/* ===[Start Global Style]=== */
+.input-holder {
+  position: relative;
+}
+
+.input-holder .input-icon {
+  left: unset;
+  right: 1rem;
+}
+/* ===[End Global Style]=== */
+
+/* ===[Start Login Motivator]=== */
+html[dir=rtl] * {
+  font-family: Changa, Poppins, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html[dir=rtl] .login-page .login-motivator .login-motivator-inner::before {
+  left: unset;
+  right: -2rem;
+}
+
+html[dir=rtl] .login-page .login-motivator .login-motivator-inner::after {
+  transform: rotateY(180deg);
+  left: unset;
+  right: 35px;
+}
+
+html[dir=rtl] .login-page .login-motivator .login-motivator-inner span {
+  text-align: right;
+  line-height: 1.25;
+}
+/* ===[End Login Motivator]=== */
+/* ===[End RTL]=== */
