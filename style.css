@@ -186,7 +186,7 @@ input {
   height: 100%;
   position: absolute;
   background: url('imgs/texture.png') no-repeat;
-  opacity: 0.023;
+  opacity: 0.1;
 }
 
 .login-page .login-motivator .login-motivator-inner {
